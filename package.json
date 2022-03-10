@@ -1,0 +1,16 @@
+{
+  "name": "trava-armoury",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ trixt63/trava-armoury",
+    "create-local": "graph create --node http://localhost:8020/ trixt63/trava-armoury",
+    "remove-local": "graph remove --node http://localhost:8020/ trixt63/trava-armoury",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 trixt63/trava-armoury"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.26.0",
+    "@graphprotocol/graph-ts": "0.24.1"
+  }
+}
