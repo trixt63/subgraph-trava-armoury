@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: TravaArmoury
@@ -8,7 +8,7 @@ dataSources:
     source:
       address: "0xAcBfD38C52Ae0344D47A7335D072DE5e3BC49f91"
       abi: TravaArmoury
-      startBlock: 15000000 
+      startBlock: 15000000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -18,10 +18,10 @@ dataSources:
         - User
       abis:
         - name: TravaArmoury
-          file: ./abis/TravaArmoury.json
+          file: TravaArmoury/abis/TravaArmoury.json
       eventHandlers:
-        - event: ChestOpen(uint256,uint8,uint8,uint256) 
+        - event: ChestOpen(uint256,uint8,uint8,uint256)
           handler: handleChestOpen
         - event: Transfer(indexed address,indexed address,indexed uint256)
-          handler: handleTransfer 
-      file: ./src/mapping.ts
+          handler: handleTransfer
+      file: TravaArmoury/TravaArmoury.wasm
